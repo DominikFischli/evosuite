@@ -129,7 +129,7 @@ public class DynaMOSA extends AbstractMOSA {
 
         String currentPopulation ="";
         for(TestChromosome tc : population) {
-            currentPopulation += String.format("\n%d: { fitness: %f, code:{\n%s\n\t}\n},", tc.hashCode(), tc.getFitness(), tc.toString());
+            currentPopulation += String.format("\n%d: { fitness: %f, rank: %d, code:{\n%s\n\t}\n},", tc.hashCode(), tc.getFitness(), tc.getRank(), tc.toString());
         }
         LoggingUtils.getEvoLogger().info("\nPopulation for iteration: {} { {} }",currentIteration, currentPopulation);
 
